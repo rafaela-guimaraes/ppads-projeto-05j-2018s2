@@ -3,8 +3,6 @@
 
 ### Integrantes do grupo:
 
-* Aluno 1
-* Aluno 2
-* Aluno 3
-* Aluno 4
-* Aluno 5
+* Bruna Aparecida de Jesus Papeschi
+* Bruno Rafael Silva
+* Rafaela Larissa Guimarães dos Santos
