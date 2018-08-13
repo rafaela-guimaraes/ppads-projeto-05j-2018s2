@@ -15,7 +15,7 @@ A solução é um sistema de controle de finanças, possui basicamente as seguin
 
 ## Como as pessoas/empresas vão usar este software?
 
-
+Os usuários irão utilizar o software para o controle de suas finanças pessoais. Será possivel acompanhar os gastos e ganhos do dia a dia. O usuário consegue visualizar toda a movimentação financeira recorrente ao dia/mês/ano de forma gráfica.O software será disponibilizado na plataforma WEB. 
 
 ## Quais linguagens/tecnologias serão utilizadas para implementar este software?
 
