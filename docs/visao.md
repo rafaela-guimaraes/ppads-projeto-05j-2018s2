@@ -1,28 +1,24 @@
 # Documento de visão
 
-## Nome do projeto: ___________________________________________
+## Nome do projeto: PennyPincher
 
 ## Principais funcionalidades (o que pessoas/empresas vão conseguir com este software?):
 
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
+A solução é um sistema de controle de finanças, possui basicamente as seguintes funcionalidades:
+
+* Adição/Edição/Exclusão de despesas
+* Adição/Edição/Exclusão de receitas 
+* Adição/Edição/Exclusão de categorias
+* Extrato de lançamentos (relação receita x despesa, bem como o saldo)
+* Resumo de despesas por categoria
+* Gráficos de visualização
 
 ## Como as pessoas/empresas vão usar este software?
 
-1. _______________________________________________________________________
-1. _______________________________________________________________________
-1. _______________________________________________________________________
-1. _______________________________________________________________________
-1. _______________________________________________________________________
-1. _______________________________________________________________________
-1. etc.
+
 
 ## Quais linguagens/tecnologias serão utilizadas para implementar este software?
 
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
+* Frontend: HTML, CSS, JAVASCRIPT
+* Backend: Python, Django 
+* Banco de dados: SqLite
