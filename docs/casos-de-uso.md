@@ -1,13 +1,10 @@
 # Casos de uso
 
-## CDU001
+## Inserir despesas 
 
-### Fluxo principal
+## Extrair relatório de gasto - mensal
 
-## CDU002
+## Acessar aplicativo
 
-### Fluxo principal
+## Inserir ganhos/remuneração
 
-## CDU003
-
-### Fluxo principal
