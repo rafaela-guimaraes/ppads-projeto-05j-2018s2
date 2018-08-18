@@ -6,3 +6,4 @@
 * Bruna Aparecida de Jesus Papeschi
 * Bruno Rafael Silva
 * Rafaela Larissa Guimarães dos Santos
+* Ricardo Morandi
