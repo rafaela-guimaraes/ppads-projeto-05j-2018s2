@@ -1,0 +1,30 @@
+{% extends 'finances/base.html' %}
+{% load get_sum %}
+{% load format_currency %}
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<h3>Despesas por categoria - {{current_month}}/{{current_year}}</h3>
+<br />
+{% if entries_by_category %}
+    <div class="panel-group">
+        {% for key, values in entries_by_category.items %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{key}} - {{category_amount|get_sum:forloop.counter0|format_currency_symbol}}
+            </div>
+            <div class="panel-body">
+                <ul> 
+                    {% for value in values %}
+                        <li>{{value.0}} - {{value.1}} - {{value.2|format_currency_symbol}} </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>    
+        {% endfor %}
+    </div>  
+{% else %}
+<h3> Você não possui despesas </h3>
+{% endif %}
+{% endblock %}

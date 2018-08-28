@@ -1,0 +1,33 @@
+.total {
+  padding-left: 2rem;
+}
+
+.button-filter {
+  display: inline;
+  margin-left: 2rem;
+}
+
+.filter {
+  padding-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+td {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+th {
+  padding-left: 2rem;
+}
+
+.expense {
+  color:#FF0000;
+  text-align: right;
+}
+
+.income {
+	text-align: right;
+}

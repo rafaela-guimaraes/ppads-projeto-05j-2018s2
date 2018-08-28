@@ -1,0 +1,47 @@
+{% extends 'finances/base_anonymous.html' %}
+{% block title %}Entrar{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Entrar</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="{% url 'finances:login_user'%}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="id_username">
+                                Usuário:
+                            </label>
+                            <div class="col-sm-10">
+                                <input id="id_username" maxlength="100" name="username" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="id_password">
+                                Senha:
+                            </label>
+                            <div class="col-sm-10">
+                                <input id="id_password" maxlength="100" name="password" type="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Entrar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <h4> Não possui uma conta?  <a href="{% url 'finances:register' %}">Clique aqui</a> para cadastrar.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

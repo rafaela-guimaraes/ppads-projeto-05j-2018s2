@@ -1,0 +1,82 @@
+{% extends 'finances/base.html' %}
+{% load format_currency %}
+{% load get_sum %}
+{% block title %}Extrato{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="filter">
+        <h3>Extrato de Lançamentos - {{current_month}}/{{current_year}}</h3>
+        <form class="form-horizontal" role="form" action="{% url 'finances:entries_statement'%}" method="get" enctype="multipart/form-data">
+            <label class="radio-inline">
+                <input type="radio" name="entry_type" value="all"  {% if entry_type == 'all'%}checked="checked" {% endif %}>Tudo
+            </label>
+            <label class="radio-inline"><input type="radio" name="entry_type" value="income" {% if entry_type == 'income'%}checked="checked" {% endif %}>Entrada</label>
+            <label class="radio-inline"><input type="radio" name="entry_type" value="expense"  {% if entry_type == 'expense'%}checked="checked" {% endif %}>Saída</label>
+            <div class="button-filter">
+                <button type="submit" class="btn btn-success">Filtrar</button>
+            </div>
+        </form>
+    </div>
+
+    <table>
+        <tr>
+            <th>Data</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Valor(R$)</th>
+        </tr>
+        {% if entry_type == 'income' %}
+            {% for entry in incomes %}
+            <tr>
+                <td>{{entry.entry_date}}</td>
+                <td>{{entry.category.description}}</td>
+                <td>{{entry.description}}</td>
+                <td class= "income">{{entry.amount|format_currency}}</td>
+            </tr>
+            {% endfor %}
+        {% elif entry_type == 'expense' %}
+            {% for entry in expenses %}
+            <tr>
+                <td>{{entry.entry_date}}</td>
+                <td>{{entry.category.description}}</td>
+                <td>{{entry.description}}</td>
+                <td class= "expense">{{entry.amount|format_currency}} - </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            {% for entry in all_entries %}
+            <tr>
+                <td>{{entry.entry_date}}</td>
+                <td>{{entry.category.description}}</td>
+                <td>{{entry.description}}</td>
+                {%if entry.category.entries_type == 'EX'%}
+                    <td class="expense">{{entry.amount|format_currency}} -</td>
+                {% else %}
+                    <td class="income">{{entry.amount|format_currency}}</td>
+                {% endif%}
+            </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+    <div class="container-fluid">
+        <h3>Resumo</h3>
+        <br />
+        <div class="row">
+            <div class="col-sm-3">Entrada</div>
+            <div class="col-sm">
+                {{total_incomes.amount__sum|format_currency_symbol}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Saída</div>
+            <div class="col-sm"> {{total_expenses.amount__sum|format_currency_symbol}} </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Saldo</div>
+            <div class="col-sm">{{total_incomes.amount__sum|get_balance:total_expenses.amount__sum|format_currency_symbol}} </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

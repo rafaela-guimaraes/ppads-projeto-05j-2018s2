@@ -1,0 +1,116 @@
+{% extends 'finances/base.html' %}
+{% block title %}Visão Geral{% endblock %}
+{% load format_currency %}
+{% block body %}
+
+<div class="container-fluid">
+    <h3>Detalhamento de lançamentos</h3>
+    <div class="row">
+        <div class="col-sm-10 col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">   
+                    <form class="form-horizontal" role="form" action="{% url 'finances:list_entry'%}" method="post" enctype="multipart/form-data" style="display: flex; justify-content: center; align-items: center;">
+                        {% csrf_token %}
+                        <div class="col-sm-3">
+                            <label for="id_month">Mês:</label>
+                            <select id="id_month"name="month">
+                                {% for month in months %}
+                                <option value="{{month.0}}"
+                                {% if month.0 == current_month%}selected="selected"{% endif %}>{{month.1}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="id_year">Ano:</label>
+                            <select name="year" id="id_year">
+                                {% for year in years %}
+                                <option value="{{year}}"
+                                {% if year == current_year%}selected="selected"{% endif %}>{{year}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                            
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-default btn-md">
+                                <span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% if incomes %}
+        <div class="container-fluid">
+            <h3>Receitas {{total_incomes.amount__sum|format_currency_symbol}}</h3>
+            {% for income in incomes %}
+            <div class="row">
+                <div class="col-sm-3">
+                    {{income.category.description}}
+                </div>
+                <div class="col-sm-3">
+                    {{income.description}}
+                </div>
+                <div class="col-sm-3">
+                    {{income.amount|format_currency_symbol}}
+                </div>
+                 
+                <form action="{% url 'finances:update_entry' income.id %}" method="get" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="income_id" value="{{ income.id }}" />
+                    <input type="hidden" name="entry_type" value="IN"/>
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+                </form>
+                <form action="{% url 'finances:delete_entry' income.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="income_id" value="{{ income.id }}" />
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+            </div>
+            {% endfor %}
+            {% else %}
+                <h3> Você não possui receitas </h3>
+            {% endif %}
+            
+            {% if expenses %}
+                <h3>Despesas {{total_expenses.amount__sum|format_currency_symbol}}</h3>
+                {% for expense in expenses %}
+                <div class="row">
+                    <div class="col-sm-3">
+                        {{expense.category.description}}
+                    </div>
+                    <div class="col-sm-3">
+                        {{expense.description}}
+                    </div>
+                    <div class="col-sm-3">
+                        {{expense.amount|format_currency_symbol}}
+                    </div>
+                    <form action="{% url 'finances:update_entry' expense.id %}" method="get" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="expense_id" value="{{ expense.id }}" />
+                        <input type="hidden" name="entry_type" value="EX"/>
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-edit"></span>
+                        </button>
+                    </form>
+                    <form action="{% url 'finances:delete_entry' expense.id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="expense_id" value="{{ expense.id }}" />
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </form>
+                </div>
+                {% endfor %}
+            {% else %}
+            <h3> Você não possui despesas </h3>
+            {% endif %}
+        </div>
+
+    {% endblock %}
+</div>
