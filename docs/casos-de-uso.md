@@ -1,6 +1,6 @@
 # Casos de uso
 
-### 1.  Inserir despesas **
+### 1.  Inserir despesas 
 
 | Campo          | Informação        |
 |---|---|
@@ -21,7 +21,7 @@
 | 2) O usuário reinicia a pagina web. |
 | 3) Volta ao passo (1) do fluxo principal. |
 
- ### 2.  Inserir ganhos/remuneração **
+ ### 2.  Inserir ganhos/remuneração 
 
 | Campo          | Informação        |
 |---|---|
@@ -42,7 +42,7 @@
 | 2) O usuário reinicia a pagina web. |
 | 3) Volta ao passo (1) do fluxo principal. |
 
- ### 3.  Extrair relatório de gasto - mensal **
+ ### 3.  Extrair relatório de gasto - mensal 
 
 | Campo          | Informação        |
 |---|---|
