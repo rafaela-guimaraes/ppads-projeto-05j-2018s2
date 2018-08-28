@@ -1,3 +1,5 @@
+![](casodeuso.jpeg)
+
 # Casos de uso
 
 ### 1.  Inserir despesas 
