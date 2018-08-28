@@ -11,9 +11,13 @@
 
 | Fluxo Principal |
 |---|
-| 1) O usuário insere as despesas desejadas. |
-| 2) O usuário salva as novas despesas.|
-| 3) O usuário seleciona a próxima ação.|
+| 1) O usuário clica em Inserir Despesas.|
+| 2) O usuário preenche o campo Data com a data de vencimentod a despesa.|
+| 3) O usuário preenche o campo Descrição com a descrição da despesa.|
+| 4) O usuário preenche o campo decimal Valor com o valor da despesa.|
+| 5) O usuário seleciona o tipo de categoria da despesa.|
+| 6) O usuário salva a nova despesa.|
+| 7) O usuário seleciona a próxima ação.|
 
 | Fluxo Alternativo (2a): A pagina web não consegue salvar as despesas.  |
 |---|
