@@ -7,3 +7,4 @@
 * Bruno Rafael Silva
 * Rafaela Larissa Guimarães dos Santos
 * Ricardo Morandi
+* Felipe de Melo Batista
