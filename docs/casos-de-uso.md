@@ -28,24 +28,24 @@
 | 2) O usuário reinicia a pagina web. |
 | 3) Volta ao passo (1) do fluxo principal. |
 
- ### 2.  Inserir ganhos/remuneração 
+ ### 2.  Inserir Receita  
 
 | Campo          | Informação        |
 |---|---|
 | Identificador: | UC02              |
-| Nome:          | Inserir ganhos/remuneração |
+| Nome:          | Inserir Receita |
 | Atores:        | Usuário               |
-| Sumário:       | Inserir ganhos/remuneração   |
+| Sumário:       | Inserir  Receita |
 
 | Fluxo Principal |
 |---|
-| 1) O usuário insere os ganhos/remuneração desejada. |
-| 2) O usuário salva os novos ganhos/remuneração.|
+| 1) O usuário insere os  Receita  desejada. |
+| 2) O usuário salva os novos  Receita .|
 | 3) O usuário seleciona a próxima ação.|
 
-| Fluxo Alternativo (2a): A pagina web não consegue salvar os ganhos/remuneração  |
+| Fluxo Alternativo (2a): A pagina web não consegue salvar os  Receita   |
 |---|
-| 1) A pagina web não consegue salvar os ganhos/remuneração |
+| 1) A pagina web não consegue salvar os  Receita  |
 | 2) O usuário reinicia a pagina web. |
 | 3) Volta ao passo (1) do fluxo principal. |
 
