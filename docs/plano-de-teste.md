@@ -7,14 +7,29 @@
 | 1 | Cadastro de Usuario | 01- Acessar o Site PennyPincher  |Site acessado com sucesso |
 | 1 | Cadastro de Usuario |  02-Cicar em "Clique Aqui"  | Pagina de cadastro acessada com sucesso  |
 | 1 | Cadastro de Usuario |  04-Preencher Usuario com "Usuario1"| Informção inserida Com Sucesso |
-| 1| Cadastro de Usuario |  05-Preencher email com "Usuario1@hotmail.com"| Informção inserida Com Sucesso |
+| 1|  Cadastro de Usuario |  05-Preencher email com "Usuario1@hotmail.com"| Informção inserida Com Sucesso |
 | 1| Cadastro de Usuario |  06-Preencher senha com "1234"| Informção inserida Com Sucesso |
 | 1| Cadastro de Usuario |  07-Clicar em "Cadastrar"| Cadastro Realizado Com Sucesso |
-| 1| Cadastro de Usuario |  08-LOgar no site PennyPincher com o usuário criado| Login realizado com sucesso |
+| 1| Cadastro de Usuario |  08-Logar no site PennyPincher com o usuário criado| Login realizado com sucesso |
 | 2 | Adiconar Receita | 01- Acessar e logar no Aplicativo PennyPincher  | Login realizado com sucesso |
-| 2 | Adiconar Receita | 02-Acessa Menu > Adicionar despesa  | Pagina acessada com sucesso  |
+| 2 | Adiconar Receita | 02-Acessar Menu > Adicionar despesa  | Pagina acessada com sucesso  |
 | 2 | Adiconar Receita | 03-Selecionar Categoria> Beneficios   | Categoria Selecionada Com Sucesso |
-| 2 | Adiconar Receita | 04-Preencher o campo  Descrição com "Beneficio"    | Informação inserida Com Sucesso |
+| 2 | Adiconar Receita | 04-Preencher o campo  Descrição com "Vale Aliemntação"    | Informação inserida Com Sucesso |
 | 2 | Adiconar Receita | 05-Preencher o campo  valor com "TESTE"    | Informação não inserida |
 | 2 | Adiconar Receita | 06-Preencher o campo  valor com "300,00"    | Informação inserida Com Sucesso |
 | 2 | Adiconar Receita | 07-Selecionar a data "20/05/2018"| Informação inserida Com Sucesso |
+| 2 | Adiconar Receita | 07-Salvar | Ação realizada com sucesso |
+| 3 | Editar Receita | 01- Acessar Lançamentos | Modulo acessado com sucesso  |
+| 3 | Editar Receita | 02- Clicar no icone de edição da receita adicionada anterioremente | Edição disponibilizada  |
+| 3 | Editar Receita | 03-Editar o valor da despesa para "200,00" e salvar  | Edição realizada com sucesso  |
+| 3 | Editar Receita | 04- Acessar novamente os Lançamentos e validar o valor alterado da receita  | Edição realizada com sucesso |
+| 4 | Excluir Receita | 01- Acessar Lançamentos | Modulo acessado com sucesso  |
+| 4 | Excluir Receita | 02- Clicar no icone de exclusão da receita adicionada anterioremente | Exclusão disponibilizada  |
+| 4 | Excluir Receita | 03- Excluir a receita| Exclusão realizada com sucesso  |
+| 4 | Excluir Receita |  04- Acessar novamente os Lançamentos e validara receita excluida  |Exclusão realizada com sucesso |
+| 5| Visualizar Receita | 02-Acessar Menu > Adicionar despesa  | Pagina acessada com sucesso  |
+| 5| Visualizar Receita | 03-Selecionar Categoria > Freelance | Categoria Selecionada Com Sucesso |
+| 5| Visualizar Receita | 04-Preencher o campo  Descrição com "Trabalho Publicidade" | Informação inserida Com Sucesso |
+| 5| Visualizar Receita |  05-Preencher o campo  valor com "500,00"    | Informação inserida Com Sucesso |
+| 5| Visualizar Receita | 06-Selecionar a data "10/09/2018"| Informação inserida Com Sucesso |
+| 5| Visualizar Receita |07-Salvar  | Ação realizada com sucesso |
