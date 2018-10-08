@@ -19,16 +19,16 @@
 
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'finances:index' %}">Finanças</a></li>
-                    <li><a href="{% url 'finances:list_entry' %}">Lançamentos</a></li>
-                    <li><a href="{% url 'finances:entries_statement' %}">Extrato</a></li>
-                    <li><a href="{% url 'finances:entries_by_category' %}">Resumo de despesas</a></li>
+                    <li><a style="color: white" href="{% url 'finances:index' %}">Finanças</a></li>
+                    <li><a style="color: white" href="{% url 'finances:list_entry' %}">Lançamentos</a></li>
+                    <li><a style="color: white" href="{% url 'finances:entries_statement' %}">Extrato</a></li>
+                    <li><a style="color: white" href="{% url 'finances:entries_by_category' %}">Resumo de despesas</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" class="nav-buttons" style="display: flex; align-items: center">
                     <li>
                         <form action="{% url 'finances:create_entry'%}" method="get" style="display: inline;">
                             <input type="hidden" name="entry_type" value="IN" />
-                            <button type="submit" class="btn btn-default btn-sm" style="background-color: #101010; color: #9d9d9d; margin-right: 1rem">
+                            <button type="submit" class="btn btn-default btn-sm" style="background-color: #51A8FF; color: white; margin-right: 1rem">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Adicionar receita</button>
                         </form>
                     </li>
@@ -36,13 +36,13 @@
                     <li>
                         <form action="{% url 'finances:create_entry'%}" method="get" style="display: inline;">
                             <input type="hidden" name="entry_type" value="EX" />
-                            <button type="submit" class="btn btn-default btn-sm" style="background-color: #101010; color: #9d9d9d;">
+                            <button type="submit" class="btn btn-default btn-sm" style="background-color: #51A8FF; color:white;">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Adicionar despesa</button>
                         </form>
                     </li>
 
                     <li>
-                        <a href="{% url 'finances:logout_user' %}">
+                        <a style="color: white" href="{% url 'finances:logout_user' %}">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Sair
                         </a>
                     </li>
