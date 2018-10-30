@@ -28,6 +28,13 @@
 | 2) O usuário reinicia a pagina web. |
 | 3) Volta ao passo (1) do fluxo principal. |
 
+| Fluxo Alternativo (3a): Usuário não encontra Categoria de Despesa desejada  |
+|---|
+| 1) O usuário não encontra a Categoria de Despesa desejada ao inserir nova despesa    |
+| 2) O usuário cadastra nova Categoria de Despesa |
+| 3) Usuário salva a nova Categoria criada |
+| 3) Volta ao passo (1) do fluxo principal. |
+
  ### 2.  Inserir Receita  
 
 | Campo          | Informação        |
