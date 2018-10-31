@@ -36,13 +36,13 @@
 | 5| Visualizar Receita | 04-Preencher o campo  Descrição com "Trabalho Publicidade" | Informação inserida Com Sucesso |
 | 5| Visualizar Receita |  05-Preencher o campo  valor com "500,00"    | Informação inserida Com Sucesso |
 | 5| Visualizar Receita | 06-Selecionar a data "10/09/2018"| Informação inserida Com Sucesso |
-| 5| Visualizar Receita |07-Salvar  | Ação realizada com sucesso |
+| 5| Visualizar Receita |07-Salvar  | Informacao da despesa incluida com sucesso.  |
 | 5| Visualizar Receita | 08-Acessar Menu > Adicionar despesa  | Pagina acessada com sucesso  |
 | 5| Visualizar Receita | 09-Selecionar Categoria > Salario | Categoria Selecionada Com Sucesso |
 | 5| Visualizar Receita | 10-Preencher o campo  Descrição com "Banco Itau" | Informação inserida Com Sucesso |
 | 5| Visualizar Receita | 11-Preencher o campo  valor com "2300,00"    | Informação inserida Com Sucesso |
 | 5| Visualizar Receita | 12-Selecionar a data "01/09/2018"| Informação inserida Com Sucesso |
-| 5| Visualizar Receita |13-Salvar  | Ação realizada com sucesso |
+| 5| Visualizar Receita |13-Salvar  |  Informacao da despesa incluida com sucesso.|
 | 5| Visualizar Receita |14-Acessar Menu> Lançamentos> Validar as receitas adicionadas com sucesso  | Ação realizada com sucesso |
 
 
