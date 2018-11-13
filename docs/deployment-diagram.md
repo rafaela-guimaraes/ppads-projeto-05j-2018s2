@@ -2,4 +2,4 @@
 
 
 
-![](deploy.png)
+![](diagrama.png)
