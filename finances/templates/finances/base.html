@@ -23,8 +23,10 @@
                     <li><a style="color: white" href="{% url 'finances:list_entry' %}">Lançamentos</a></li>
                     <li><a style="color: white" href="{% url 'finances:entries_statement' %}">Extrato</a></li>
                     <li><a style="color: white" href="{% url 'finances:entries_by_category' %}">Resumo de despesas</a></li>
+                    <li><a style="color: white" href="{% url 'finances:list_category' %}">Categorias</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right" class="nav-buttons" style="display: flex; align-items: center">
+
                     <li>
                         <form action="{% url 'finances:create_entry'%}" method="get" style="display: inline;">
                             <input type="hidden" name="entry_type" value="IN" />

@@ -1,0 +1,58 @@
+{% extends 'finances/base.html' %}
+{% block title %}Visão Geral{% endblock %}
+{% load format_currency %}
+{% block body %}
+
+<div class="container-fluid">
+    <h3>Categorias Cadastradas</h3>
+
+    {% if incomes %}
+        <div class="container-fluid">
+            <h3>Receitas</h3>
+            {% for income in incomes %}
+            <div class="row">
+                <div class="col-sm-3">
+                    {{income.description}}
+                </div>
+                <form action="{% url 'finances:delete_category' income.id %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="hidden" name="income_id" value="{{ income.id }}" />
+                    <button type="submit" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+            </div>
+            {% endfor %}
+            {% else %}
+                <h3> Você não categorias do tipo receitas </h3>
+            {% endif %}
+            
+            {% if expenses %}
+                <h3>Despesas</h3>
+                {% for expense in expenses %}
+                <div class="row">
+                    <div class="col-sm-3">
+                        {{expense.description}}
+                    </div>
+    
+                    <form action="{% url 'finances:delete_entry' expense.id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="expense_id" value="{{ expense.id }}" />
+                        <button type="submit" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </form>
+                </div>
+                {% endfor %}
+            {% else %}
+            <h3> Você não possui categorias do tipo despesas </h3>
+            {% endif %}
+            <br />
+            <form action="{% url 'finances:create_category'%}" method="get" style="display: inline;">
+                <button type="submit" class="btn btn-default btn-sm" style="background-color: #51A8FF; color:white;">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Adicionar categoria</button>
+            </form>
+        </div>
+
+    {% endblock %}
+</div>

@@ -2,8 +2,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View, ListView
-from .forms import UserForm, EntryForm
-from .models import Entry
+from .forms import UserForm, EntryForm, CategoryForm
+from .models import Entry, Category
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 import datetime
@@ -64,6 +64,18 @@ class CreateEntry(LoginRequiredMixin, CreateView):
         kwargs['entry_type'] = self.request.GET.get('entry_type', 'EX')
         return kwargs
 
+class CreateCategory(LoginRequiredMixin, CreateView):
+    login_url = "finances:login_user"
+    template_name = 'finances/category_form.html'
+    success_url = reverse_lazy('finances:create_category')
+    form_class = CategoryForm
+    
+    def form_valid(self, form):
+        category = form.save(commit=False)
+        category.agent = self.request.user
+        category.save()
+        return super(CreateCategory, self).form_valid(form)
+
 
 class ListEntry(LoginRequiredMixin, View):
     template_name = 'finances/list_entry.html'
@@ -76,6 +88,13 @@ class ListEntry(LoginRequiredMixin, View):
         return get_list_entries(request, None, self.template_name) 
 
 
+class ListCategory(LoginRequiredMixin, View):
+    template_name = 'finances/list_category.html'
+    login_url = 'finances:login_user'
+
+    def get(self, request):
+        return render(request, self.template_name, get_list_category())
+     
 class EntriesStatement(LoginRequiredMixin, View):
     template_name = 'finances/entries_statement.html'
     login_url = "finances:login_user"
@@ -117,6 +136,13 @@ class DeleteEntry(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('finances:list_entry')
 
 
+
+class DeleteCategory(LoginRequiredMixin, DeleteView):
+    login_url = 'finances:login_user'
+    model = Category
+    success_url = reverse_lazy('finances:list_category')
+
+
 def login_user(request):
         if request.method == "POST":
             username = request.POST['username']
@@ -145,6 +171,12 @@ def delete_entry(request, entry_id):
     entry.delete()
     return render(request, 'finances/list_entry.html')
     
+
+
+def delete_category(request, category_id):
+    category = Category.objects.get(pk=category_id)
+    category.delete()
+    return render(request, 'finances/list_category.html')
 
 def get_list_entries(request, limit, template_name):
     entry_type = request.GET.get('entry_type', 'all')
@@ -206,3 +238,14 @@ def get_list_expenses_by_category(request, limit, month, year):
                 
 
     return expenses_by_category
+
+def get_list_category():
+    incomes = Category.objects.filter(entries_type='IN')
+    expenses = Category.objects.filter(entries_type='EX')
+    
+    context = {
+        'incomes': incomes,
+        'expenses': expenses,
+    }
+
+    return context

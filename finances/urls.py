@@ -15,4 +15,10 @@ urlpatterns = [
     path('entries_statement/', views.EntriesStatement.as_view(), name='entries_statement'),
     path('entries_by_category/', views.EntriesByCategory.as_view(), name='entries_by_category'),
     path('delete/<int:pk>/', views.DeleteEntry.as_view(), name='delete_entry'),
+    path('create_category/', views.CreateCategory.as_view(), name='create_category'),
+    path('list_category/', views.ListCategory.as_view(), name='list_category'),
+    path('delete_category/<int:pk>/', views.DeleteCategory.as_view(), name='delete_category'),
+
+
+
 ]

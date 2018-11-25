@@ -19,8 +19,9 @@ class Category(models.Model):
         choices=ENTRY_TYPE_CHOICES,
         default= EXPENSE,
     )
-
     description = models.CharField(max_length=100)
+    agent = models.ForeignKey(User, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return '%s' % (self.description)

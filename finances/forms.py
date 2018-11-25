@@ -29,3 +29,13 @@ class EntryForm(forms.ModelForm):
         model = Entry
         fields = ['category', 'description', 'amount', 'entry_date']
 
+
+class CategoryForm(forms.ModelForm):
+    
+    description = forms.CharField(label='Descrição', required=True)
+    entries_type = forms.ChoiceField(choices=[('IN', 'Receita'),
+        ('EX', 'Despesa')], required=True, label='Tipo de categoria')
+    
+    class Meta:
+        model = Category
+        fields = ['description', 'entries_type']
