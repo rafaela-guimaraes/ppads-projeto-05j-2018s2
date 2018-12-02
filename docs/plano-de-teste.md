@@ -79,6 +79,13 @@
 | 4| Visualizar Despesa | 12-Selecionar a data "09/10/2018"| Informação inserida Com Sucesso |
 | 4| Visualizar Despesa |13-Salvar  | Ação realizada com sucesso |
 | 4| Visualizar Despesa |14-Acessar Menu> Lançamentos> Validar as Despesas adicionadas com sucesso  | Ação realizada com sucesso |
+
+
+## Modulo cadastrar Categoria 
+
+| N°         | Cenário        |  Steps       |  Esperado       |
+|---|---|---|---|
+| 1|  Adiconar Despesa | 01- Acessar e logar no Aplicativo PennyPincher  | Login realizado com sucesso |
 | 5| Cadastrar Categoria  |01-Acessar Menu> Adicionar Despesas   | Ação realizada com sucesso |
 | 5| Cadastrar Categoria  |02-Selecionar "Adicionar Categoria"   | Ação realizada com sucesso |
 | 5| Cadastrar Categoria  |03-Cadastrar NOva Categoria "Decoração"   | Cadastro realizado com sucesso |
