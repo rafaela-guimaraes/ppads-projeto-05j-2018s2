@@ -86,8 +86,12 @@
 | N°         | Cenário        |  Steps       |  Esperado       |
 |---|---|---|---|
 | 1|  Adiconar Despesa | 01- Acessar e logar no Aplicativo PennyPincher  | Login realizado com sucesso |
-| 5| Cadastrar Categoria  |01-Acessar Menu> Adicionar Despesas   | Ação realizada com sucesso |
-| 5| Cadastrar Categoria  |02-Selecionar "Adicionar Categoria"   | Ação realizada com sucesso |
-| 5| Cadastrar Categoria  |03-Cadastrar NOva Categoria "Decoração"   | Cadastro realizado com sucesso |
-| 5| Cadastrar Categoria  |04-Salvar Categoria nova    | Categoria salva com sucesso |
-| 5| Cadastrar Categoria  |05-Selecionar o campo Categoria e validar se a nova categoria foi inserida com sucesso   | Categoria inserida com sucesso |
+| 1| Cadastrar Categoria  |02-Acessar Menu>Categorias | Ação realizada com sucesso |
+| 1| Cadastrar Categoria  |03-Selecionar "Adicionar Categoria"   | Ação realizada com sucesso |
+| 1| Cadastrar Categoria  |04-Cadastrar no campo "Descrição" a nova categoria "Decoração"   | Informação inserida no campo com sucesso |
+| 1| Cadastrar Categoria  |05-Selecionar o "tipo de categoria " como "Receita"  e salvar   | Categoria salva com sucesso |
+| 1| Cadastrar Categoria  |06-Acessar Menu> Categorias e validar se a nova categoria foi inserida com sucesso   | Categoria inserida com sucesso |
+| 1| Cadastrar Categoria  |07-Selecionar "Adicionar Categoria"   | Ação realizada com sucesso |
+| 1| Cadastrar Categoria  |08-Cadastrar no campo "Descrição" a nova categoria "Condominio "   | Informação inserida no campo com sucesso |
+| 1| Cadastrar Categoria  |09-Selecionar o "tipo de categoria " como "Despesa"  e salvar   | Categoria salva com sucesso |
+| 1| Cadastrar Categoria  |10-Acessar Menu> Categorias e validar se a nova categoria foi inserida com sucesso   | Categoria inserida com sucesso |
