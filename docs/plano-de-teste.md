@@ -85,7 +85,7 @@
 
 | N°         | Cenário        |  Steps       |  Esperado       |
 |---|---|---|---|
-| 1|  Adiconar Despesa | 01- Acessar e logar no Aplicativo PennyPincher  | Login realizado com sucesso |
+| 1|  Cadastrar Categoria | 01- Acessar e logar no Aplicativo PennyPincher  | Login realizado com sucesso |
 | 1| Cadastrar Categoria  |02-Acessar Menu>Categorias | Ação realizada com sucesso |
 | 1| Cadastrar Categoria  |03-Selecionar "Adicionar Categoria"   | Ação realizada com sucesso |
 | 1| Cadastrar Categoria  |04-Cadastrar no campo "Descrição" a nova categoria "Decoração"   | Informação inserida no campo com sucesso |
